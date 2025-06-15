@@ -1,0 +1,41 @@
+<nav class="shadow-md bg-gray-800 fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+              <!-- Logo/Name Section -->
+              <a href="#" class="text-3xl font-black text-white flex items-center">
+                  <span class="mr-2 text-4xl font-black">AP</span> | 
+                  <div class="flex flex-col items-start ml-2">
+                      <span class="custom-font-size font-black">AYUSH</span>
+                      <span class="text-blue-600 custom-font-size font-black">PATEL</span>
+                  </div>
+              </a>
+          </div>
+          <div class="hidden md:flex space-x-8">
+              <a href="#" class="cursor-pointer text-gray-300 hover:text-blue-600">Home</a>
+              <a (click)="navigateToBlog()" class="cursor-pointer text-gray-300 hover:text-blue-600">Blogs</a>
+              <a (click)="navigateToProject()" class="cursor-pointer text-gray-300 hover:text-blue-600">Projects</a>
+              <a (click)="navigateToContact()" class="cursor-pointer text-gray-300 hover:text-blue-600">Contact</a>
+          </div>
+          <div class="md:hidden">
+              <button (click)="toggleMenu()" class="text-gray-300 focus:outline-none">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  </div>
+
+  <div class="md:hidden" [ngClass]="{'block': isOpen, 'hidden': !isOpen}">
+      <a href="#" class="block px-4 py-2 text-gray-300 hover:text-blue-600">Home</a>
+      <a (click)="navigateToBlog()" class="block px-4 py-2 text-gray-300 hover:text-blue-600">Blogs</a>
+      <a (click)="navigateToProject()" class="block px-4 py-2 text-gray-300 hover:text-blue-600">Projects</a>
+      <a (click)="navigateToContact()" class="block px-4 py-2 text-gray-300 hover:text-blue-600">Contact</a>
+  </div>
+</nav>
+
+<!-- Content Below the Header -->
+<div class="pt-16"> <!-- Add padding-top to offset the fixed header -->
+  <!-- Your main content goes here -->
+</div>

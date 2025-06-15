@@ -1,0 +1,11 @@
+.dotted-line {
+    border-top: 2px dashed brown;  /* Change color as needed */
+}
+
+.hover:scale-105 {
+    transition: transform 0.3s ease;
+}
+
+.hover:hover {
+    transform: scale(1.05);
+}
